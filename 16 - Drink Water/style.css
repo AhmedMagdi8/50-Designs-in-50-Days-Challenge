@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400,600;700&display=swap');
+
+:root {
+    --border-color: #144fc6;
+    --fill-color: #6ab3f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    background-color: #3494e4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 10px 0 0;
+}
+
+h3 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+/*
+
+
+The CSS rule border-radius: 0 0 50px 50px; applies rounded corners to the bottom left and bottom right corners of an element. Here's how it breaks down:
+
+0 0: No rounding for the top-left and top-right corners.
+50px 50px: The bottom-left and bottom-right corners will be rounded with a radius of 50px.
+
+**/
+.cup {
+    background-color: #fff;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 0 0 40px 40px;
+    height: 330px;
+    width: 150px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.cup.cup-small {
+    width: 50px;
+    height: 95px;
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+    background-color: var(--fill-color);
+    color: #fff;
+}
+
+.cups {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+
+}
+
+/*
+The CSS property flex: 1; is shorthand for setting the flex-grow, flex-shrink, and flex-basis properties of a flex item in a flex container.
+
+Breakdown of flex: 1;
+flex-grow: 1 — The item will grow to fill the available space in the flex container relative to other flex items. If all items have flex-grow: 1, they will take up equal space.
+flex-shrink: 1 — The item can shrink if necessary when the container's size is reduced.
+flex-basis: 0 — The initial size of the item is set to 0, meaning the item's size is determined by its content and the available space in the container.
+
+*/
+.remained {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    transition: 0.3s ease;
+}
+
+.remained span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remained small {
+    font-size: 12px;
+}
+
+.percentage {
+    background-color: var(--fill-color);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 0;
+    transition: 0.3s ease;
+}
+
+
+.text {
+    text-align: center;
+    margin: 0 0 5px;
+}
